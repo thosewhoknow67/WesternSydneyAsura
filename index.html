@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Western Sydney Asura · Kho Kho Club</title>
-<meta name="description" content="Western Sydney Asura Kho Kho Club. Chase. Dodge. Conquer. Free membership, all levels welcome. Training in Westmead and Pendle Hill." />
+<meta name="description" content="Western Sydney Asura Kho Kho Club. Chase. Dodge. Conquer. Free membership, all levels welcome. Training in Westmead and Toongabbie." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Teko:wght@400;500;600;700&family=Barlow:wght@300;400;500;600;700&family=Barlow+Semi+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
@@ -432,7 +432,7 @@ body.menu-open #mobileMenu .btn{transform:translateY(0);opacity:1}
    ============================================================ */
 footer{background:var(--coal);border-top:1px solid var(--line);padding:72px 0 36px}
 .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:50px}
-.foot-brand .emblem{width:64px;height:64px;margin-bottom:18px}
+.foot-brand .emblem{display:block;width:130px;height:130px;margin-bottom:20px;border-radius:50%;overflow:hidden}
 .foot-brand b{font-family:'Anton';font-size:1.5rem;text-transform:uppercase;letter-spacing:.02em;display:block}
 .foot-brand p{color:var(--bone-dim);margin-top:12px;max-width:34ch;font-size:.96rem}
 .foot-col h5{font-family:'Barlow Semi Condensed';font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.76rem;color:var(--gold);margin-bottom:18px}
@@ -617,7 +617,7 @@ footer{background:var(--coal);border-top:1px solid var(--line);padding:72px 0 36
       <div class="eyebrow">Our Story</div>
       <p class="ethos-quote" style="margin-top:18px">From a borrowed patch of grass to <span>national champions.</span></p>
       <p>We have run as a community club since January 2025. It began the way most good things do: a handful of mates, an empty park, and a sport we grew up loving but could not find anywhere near home. We marked out our first court on a Western Sydney oval, rounded up whoever would run, and played Kho Kho until the floodlights came on.</p>
-      <p style="color:var(--bone-dim);margin-top:16px;font-size:1.05rem">From that grassroots start the Asura rose fast. In our very first year we went all the way to the Kho Kho Nationals 2025 in Australia and came home champions in both the men's and women's competitions. Today we train across two grounds in Westmead and Pendle Hill, open to anyone willing to chase, and we keep it free on purpose. Kho Kho belongs to the community, and so do we.</p>
+      <p style="color:var(--bone-dim);margin-top:16px;font-size:1.05rem">From that grassroots start the Asura rose fast. In our very first year we went all the way to the Kho Kho Nationals 2025 in Australia and came home champions in both the men's and women's competitions. Today we train across two grounds in Westmead and Toongabbie, open to anyone willing to chase, and we keep it free on purpose. Kho Kho belongs to the community, and so do we.</p>
       <div class="story-trophy" data-d="1">
         <span class="trophy-ic">🏆</span>
         <div><b>Double national champions</b><span>Men's &amp; Women's · Kho Kho Nationals 2025, Australia</span></div>
@@ -662,15 +662,15 @@ footer{background:var(--coal);border-top:1px solid var(--line);padding:72px 0 36
         </div>
         <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=MJ+Bennett+Reserve+Westmead+NSW" target="_blank" rel="noopener">Open in maps <span class="arr">→</span></a>
       </div>
-      <div class="ground reveal" data-d="1" data-ground="pendle">
-        <span class="tag">⬢ Pendle Hill</span>
-        <h3>Pendle Hill</h3>
-        <div class="loc">📍 Pendle Hill, NSW</div>
+      <div class="ground reveal" data-d="1" data-ground="toongabbie">
+        <span class="tag">⬢ Toongabbie</span>
+        <h3>Toongabbie</h3>
+        <div class="loc">📍 Toongabbie, NSW</div>
         <div class="days">
           <div class="day" data-day="1"><span class="d">Monday</span><span class="t">5:30 – 7:30 PM</span></div>
           <div class="day" data-day="5"><span class="d">Friday</span><span class="t">5:30 – 7:30 PM</span></div>
         </div>
-        <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Pendle+Hill+NSW" target="_blank" rel="noopener">Open in maps <span class="arr">→</span></a>
+        <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Toongabbie+NSW" target="_blank" rel="noopener">Open in maps <span class="arr">→</span></a>
       </div>
     </div>
     <p class="train-note reveal">New to Kho Kho? Come a few minutes early and let a coach know and we'll get you started.</p>
@@ -741,7 +741,7 @@ footer{background:var(--coal);border-top:1px solid var(--line);padding:72px 0 36
       <div class="foot-col">
         <h5>Train with us</h5>
         <p>MJ Bennett Reserve, Westmead<br><span style="color:var(--bone-faint)">Wed · 5:30–7:30 PM</span></p>
-        <p>Pendle Hill<br><span style="color:var(--bone-faint)">Mon &amp; Fri · 5:30–7:30 PM</span></p>
+        <p>Toongabbie<br><span style="color:var(--bone-faint)">Mon &amp; Fri · 5:30–7:30 PM</span></p>
       </div>
     </div>
     <div class="foot-bottom">
@@ -898,14 +898,8 @@ const TEAM = [
   {
     name:'Mangesh Jagtap', role:'Founder & President', mono:'MJ', lead:true,
     photo:'team/mangesh.jpg',
-    imgZoom:0.85, imgPos:'center 20%',
     bio:'Mangesh Jagtap is the Founder and President of Western Sydney Asuras, leading the club\u2019s vision to build a strong, professional and community-driven Kho-Kho pathway in Western Sydney.',
     awards:['2023 World Cup Vice Captain','2023 World Cup Player of the Match \u00d72','2023 World Cup Attacker of the Match \u00d72','2024 KP Winner (Vice Captain)','2025 Nationals Men\u2019s Representative','2025 Nationals Men\u2019s Best Player of the Competition']
-  },
-  {
-    name:'Arnav Kale', role:'Marketing Lead & Co-Founder', mono:'AK', photo:'team/arnav.jpg',
-    bio:'Arnav Kale is the Marketing Lead and Co-Founder of Western Sydney Asuras, driving the club\u2019s growth and community engagement while establishing himself as one of the club\u2019s rising talents on the field.',
-    awards:['2024 KP Winner','2025 Liverpool Exhibition Upcoming Player Award','2025 Nationals 3rd Place (Vice Captain)']
   },
   {
     name:'Mitali Kodolikar', role:'Vice President', mono:'MK', photo:'team/mitali.jpg',
@@ -913,14 +907,19 @@ const TEAM = [
     awards:['2024 KP Winner','2025 KP Winner (Captain)','2025 Nationals Women\u2019s Winner (Vice Captain)']
   },
   {
+    name:'Divyaansh Vashishat', role:'Secretary & Co-Founder', mono:'DV', photo:'team/divyaansh.jpg',
+    bio:'Divyaansh Vashishat is the Secretary and Co-Founder of Western Sydney Asuras, supporting the club\u2019s administration, operations and long-term development while contributing to its success on the national stage.',
+    awards:['2025 Nationals Winner']
+  },
+  {
     name:'Vaibhaav Jaiin', role:'Treasurer & Co-Founder', mono:'VJ', photo:'team/vaibhaav.jpg',
     bio:'Vaibhaav Jaiin is the Treasurer and Co-Founder of Western Sydney Asuras, combining strategic leadership with outstanding on-field performances as one of the club\u2019s premier attackers.',
     awards:['2024 KP Winner','2025 KP Winner (Captain)','2025 Nationals Winner','2025 Nationals Men\u2019s Best Attacker of the Match']
   },
   {
-    name:'Divyaansh Vashishat', role:'Secretary & Co-Founder', mono:'DV', photo:'team/divyaansh.jpg',
-    bio:'Divyaansh Vashishat is the Secretary and Co-Founder of Western Sydney Asuras, supporting the club\u2019s administration, operations and long-term development while contributing to its success on the national stage.',
-    awards:['2025 Nationals Winner']
+    name:'Arnav Kale', role:'Marketing Lead & Co-Founder', mono:'AK', photo:'team/arnav.jpg',
+    bio:'Arnav Kale is the Marketing Lead and Co-Founder of Western Sydney Asuras, driving the club\u2019s growth and community engagement while establishing himself as one of the club\u2019s rising talents on the field.',
+    awards:['2024 KP Winner','2025 Liverpool Exhibition Upcoming Player Award','2025 Nationals 3rd Place (Vice Captain)']
   },
   {
     name:'Tejas Jagtap', role:'Events Director & Co-Founder', mono:'TJ', photo:'team/tejas.jpg',
@@ -1024,13 +1023,13 @@ document.querySelectorAll('[data-count]').forEach(el=>counterIO.observe(el));
 
 /* ============================================================
    NEXT TRAINING SESSION + COUNTDOWN
-   Mon(1) & Fri(5) → Pendle Hill · Wed(3) → MJ Bennett
+   Mon(1) & Fri(5) → Toongabbie · Wed(3) → MJ Bennett
    Sessions start 17:30, run to 19:30 local time.
    ============================================================ */
 const SESSIONS = {
-  1:{name:'Pendle Hill', sub:'Pendle Hill'},
+  1:{name:'Toongabbie', sub:'Toongabbie'},
   3:{name:'MJ Bennett Reserve', sub:'Westmead'},
-  5:{name:'Pendle Hill', sub:'Pendle Hill'}
+  5:{name:'Toongabbie', sub:'Toongabbie'}
 };
 const START_H = 17, START_M = 30, END_H = 19, END_M = 30;
 
