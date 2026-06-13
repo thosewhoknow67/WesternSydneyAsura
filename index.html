@@ -662,15 +662,15 @@ footer{background:var(--coal);border-top:1px solid var(--line);padding:72px 0 36
         </div>
         <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=MJ+Bennett+Reserve+Westmead+NSW" target="_blank" rel="noopener">Open in maps <span class="arr">→</span></a>
       </div>
-      <div class="ground reveal" data-d="1" data-ground="binalong">
+      <div class="ground reveal" data-d="1" data-ground="pendle">
         <span class="tag">⬢ Pendle Hill</span>
-        <h3>Binalong Park</h3>
+        <h3>Pendle Hill</h3>
         <div class="loc">📍 Pendle Hill, NSW</div>
         <div class="days">
           <div class="day" data-day="1"><span class="d">Monday</span><span class="t">5:30 – 7:30 PM</span></div>
           <div class="day" data-day="5"><span class="d">Friday</span><span class="t">5:30 – 7:30 PM</span></div>
         </div>
-        <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Binalong+Park+Pendle+Hill+NSW" target="_blank" rel="noopener">Open in maps <span class="arr">→</span></a>
+        <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Pendle+Hill+NSW" target="_blank" rel="noopener">Open in maps <span class="arr">→</span></a>
       </div>
     </div>
     <p class="train-note reveal">New to Kho Kho? Come a few minutes early and let a coach know and we'll get you started.</p>
@@ -741,7 +741,7 @@ footer{background:var(--coal);border-top:1px solid var(--line);padding:72px 0 36
       <div class="foot-col">
         <h5>Train with us</h5>
         <p>MJ Bennett Reserve, Westmead<br><span style="color:var(--bone-faint)">Wed · 5:30–7:30 PM</span></p>
-        <p>Binalong Park, Pendle Hill<br><span style="color:var(--bone-faint)">Mon &amp; Fri · 5:30–7:30 PM</span></p>
+        <p>Pendle Hill<br><span style="color:var(--bone-faint)">Mon &amp; Fri · 5:30–7:30 PM</span></p>
       </div>
     </div>
     <div class="foot-bottom">
@@ -898,6 +898,7 @@ const TEAM = [
   {
     name:'Mangesh Jagtap', role:'Founder & President', mono:'MJ', lead:true,
     photo:'team/mangesh.jpg',
+    imgZoom:0.85, imgPos:'center 20%',
     bio:'Mangesh Jagtap is the Founder and President of Western Sydney Asuras, leading the club\u2019s vision to build a strong, professional and community-driven Kho-Kho pathway in Western Sydney.',
     awards:['2023 World Cup Vice Captain','2023 World Cup Player of the Match \u00d72','2023 World Cup Attacker of the Match \u00d72','2024 KP Winner (Vice Captain)','2025 Nationals Men\u2019s Representative','2025 Nationals Men\u2019s Best Player of the Competition']
   },
@@ -965,7 +966,9 @@ const TEAM = [
       const test = new Image();
       test.onload = ()=>{
         const av = card.querySelector('.avatar');
-        av.innerHTML = `<img src="${esc(m.photo)}" alt="${esc(m.name)}">`;
+        const pos = m.imgPos || 'center top';
+        const zoom = m.imgZoom || 1;
+        av.innerHTML = `<img src="${esc(m.photo)}" alt="${esc(m.name)}" style="object-position:${esc(pos)};transform:scale(${zoom})">`;
         const bg = document.createElement('img');
         bg.className = 'member-bg'; bg.src = m.photo; bg.alt = ''; bg.setAttribute('aria-hidden','true');
         card.insertBefore(bg, card.firstChild);
@@ -1021,13 +1024,13 @@ document.querySelectorAll('[data-count]').forEach(el=>counterIO.observe(el));
 
 /* ============================================================
    NEXT TRAINING SESSION + COUNTDOWN
-   Mon(1) & Fri(5) → Binalong Park · Wed(3) → MJ Bennett
+   Mon(1) & Fri(5) → Pendle Hill · Wed(3) → MJ Bennett
    Sessions start 17:30, run to 19:30 local time.
    ============================================================ */
 const SESSIONS = {
-  1:{name:'Binalong Park', sub:'Pendle Hill'},
+  1:{name:'Pendle Hill', sub:'Pendle Hill'},
   3:{name:'MJ Bennett Reserve', sub:'Westmead'},
-  5:{name:'Binalong Park', sub:'Pendle Hill'}
+  5:{name:'Pendle Hill', sub:'Pendle Hill'}
 };
 const START_H = 17, START_M = 30, END_H = 19, END_M = 30;
 
